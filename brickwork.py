@@ -159,19 +159,20 @@ class BrickWall:
                     self.available_bricks.append(brick_one)  # In case of no match the chosen brick will be restored in
                     brick_one = None  # 'available_bricks' variable and 'brick_one' will be set back to 'None'
 
-            while True:
-                brick_two = self.available_bricks.popleft()  # Same process will apply in choosing brick number two
+            while True:  # Same applies for picking brick number two
+                brick_two = self.available_bricks.popleft()
                 if self.m <= 4:
                     if brick_two != bricks_to_cover_two[0] or brick_two != bricks_to_cover_two[1]:
                         break
                     else:
                         self.available_bricks.append(brick_two)
                         brick_two = None
-                if brick_two != bricks_to_cover_two[0] and brick_two != bricks_to_cover_two[1]:
+                elif brick_two != bricks_to_cover_two[0] and brick_two != bricks_to_cover_two[1]:
                     break
                 else:
                     self.available_bricks.append(brick_two)
                     brick_two = None
+
             return brick_one, brick_two
 
         elif self.pattern == 'vertical':  # In case 'pattern' is set to 'vertical' then only one brick will be chosen
