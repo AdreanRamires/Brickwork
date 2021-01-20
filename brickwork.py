@@ -180,6 +180,12 @@ class BrickWall:
             brick_one = None
             while True:
                 brick_one = self.available_bricks.popleft()
+                if self.m <= 4:
+                    if brick_one != bricks_to_cover_one[0] or brick_one != bricks_to_cover_one[1]:
+                        break
+                    else:
+                        self.available_bricks.append(brick_one)
+                        brick_one = None
                 if brick_one != bricks_to_cover_one[0][0] and brick_one != bricks_to_cover_one[0][1]:
                     break
                 else:
