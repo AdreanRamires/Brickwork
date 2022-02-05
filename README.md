@@ -13,7 +13,7 @@
   impossible to create the ​ second​ layer and print it in the console.
  
  
-###Input
+ ### Input
 
   1. N​, ​ M — dimensions of the area (both layers’ dimension a.k.a wall thickness/width
   and length).
@@ -26,12 +26,12 @@
   exceeding 100.
   
 
-###Output
+### Output
   Write ​ N lines with ​ M numbers each that describe the layout of the second layer in the way
   shown above.
   
   
-###Assessment
+### Assessment
   1. If the solution exists, write ​ N lines with ​ M numbers each that describe the layout of
   the second layer in the way shown above.
   2. Print output `-1` with a message that no solution exists.
